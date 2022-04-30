@@ -14,6 +14,12 @@ typedef	struct s_datas
 	struct s_datas *previous;	
 } t_datas;
 
+typedef	struct s_myBuiltins
+{
+	char *name;
+	int (*func)(void);	
+} t_myBuiltins;
+
 //External functions
 size_t	ft_strlen(const char *str);
 size_t	ft_strlen_double(char **str);

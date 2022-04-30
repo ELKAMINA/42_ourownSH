@@ -84,12 +84,19 @@ char	*get_bf_prompt()
 void	get_prompt(char **my_env)
 {
 	char	*entry;
+	int		int_mode;
 	char	*my_prompt;
 
 	my_prompt = get_bf_prompt();
-	while(1)
+	while(int_mode)
 	{
-		entry = readline(my_prompt);
-		parse_args(entry);
+		int_mode = isatty(STDIN_FILENO);
+		if (int_mode == 1)
+		{
+			entry = readline(my_prompt);
+			// RAJOUTER CONDITION SI CA FOIRE
+	        add_history( entry ); //add it to the history
+			parse_args(entry);
+        }
 	}
 }
