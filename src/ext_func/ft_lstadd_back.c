@@ -1,20 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ael-khat <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/06 17:52:13 by ael-khat          #+#    #+#             */
-/*   Updated: 2021/12/07 15:10:32 by ael-khat         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "../../includes/minishell.h"
 
-#include "libft.h"
-
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_datas **alst, t_datas *new)
 {
-	t_list	*last;
+	t_datas	*last;
 
 	if (*alst == NULL)
 	{
@@ -23,4 +11,6 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 	}
 	last = ft_lstlast(*alst);
 	last -> next = new;
+	new->previous = last;
+	new->next = NULL;
 }

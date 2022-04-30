@@ -87,5 +87,9 @@ void	get_prompt(char **my_env)
 	char	*my_prompt;
 
 	my_prompt = get_bf_prompt();
-	entry = readline(my_prompt);
+	while(1)
+	{
+		entry = readline(my_prompt);
+		parse_args(entry);
+	}
 }
