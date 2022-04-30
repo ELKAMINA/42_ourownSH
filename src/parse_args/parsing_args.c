@@ -6,7 +6,7 @@ void	create_all_args(t_datas *arg_one, t_datas *arg_two,
 	int	i;
 
 	i = 2;
-	while (i <= ft_strlen_double(args))
+	while (i <= (ft_strlen_double(args) - 1))
 	{
 		arg_two = ft_lstnew(args[i]);
 		ft_exit(arg_two);
