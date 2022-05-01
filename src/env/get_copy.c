@@ -1,19 +1,24 @@
 #include "../../includes/minishell.h"
 
-char	**get_copy_env(char **env)
+char	**get_copy(char **d_tab)
 {
-	char	**my_env;
+	char	**new_dtab;
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	my_env = malloc(sizeof(char **) * ft_strlen_double(env));
-	while (env[i])
+	new_dtab = malloc(sizeof(char **) * ft_strlen_double(d_tab));
+	while (d_tab[i])
 	{
-		my_env[i] = malloc(sizeof(char) * ft_strlen(env[i]) + 1);
-		my_env[i] = ft_strcpy(my_env[i], env[i]);
+		new_dtab[i] = malloc(sizeof(char) * ft_strlen(d_tab[i]) + 1);
+		new_dtab[i] = ft_strcpy(new_dtab[i], d_tab[i]);
 		i++;
 	}
-	return (my_env);
+	return (new_dtab);
+}
+
+t_blocks	*fromtab_toll(char **args)
+{
+	return (get_ll(args));
 }

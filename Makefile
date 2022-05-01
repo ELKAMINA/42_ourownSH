@@ -18,6 +18,7 @@ SRC = minishell.c \
 		./src/env/get_copy.c \
 		./src/parse_args/parsing_args.c \
 		./src/exit_free/exit_free.c \
+		./src/inits/init_struct.c \
 
 OBJ = $(SRC:.c=.o)
 
