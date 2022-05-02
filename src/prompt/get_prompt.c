@@ -14,7 +14,7 @@ void	get_prompt(char **my_env)
 		{
 			entry = readline(my_prompt);
 			// RAJOUTER CONDITION SI CA FOIRE
-	        add_history( entry ); //add it to the history
+	        add_history(entry); //add it to the history
 			parse_args(entry);
         }
 	}

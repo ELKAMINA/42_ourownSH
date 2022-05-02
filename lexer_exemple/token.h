@@ -3,7 +3,7 @@
 
 #include "lexer.h"
 
-typedef struct TOKEN_STRUCT
+typedef struct s_token
 {
 	enum
 	{
@@ -12,11 +12,11 @@ typedef struct TOKEN_STRUCT
 		TOKEN_STRING,
 		TOKEN_SEMI,
 		TOKEN_LPAREN,
-		TOEN_RPAREN,
+		TOKEN_RPAREN,
 	} type ;
 	char	*value;
-}	token_T;
+}	t_token;
 
-token_T *init_token(int type, char *value);
+t_token *init_token(int type, char *value);
 
 #endif

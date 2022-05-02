@@ -27,7 +27,6 @@ void	*get_blocks(char **args)
 		c_block->spl_bl = ft_split(c_block->block, ' ');
 		c_block->ll_pipe = get_ll(c_block->spl_bl);
 		//Mettre tous les cas de figure ossible, si commande ou operator ou fichier ou autre
-		
 		c_block = c_block->next;
 	}
 	return (block);
