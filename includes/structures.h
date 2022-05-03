@@ -37,5 +37,28 @@ typedef	struct s_myBuiltins
 	int (*func)(void);	
 } t_myBuiltins;
 
+typedef struct s_tokens
+{
+	enum
+	{
+		TOKEN_HYPHEN,
+		TOKEN_RR,
+		TOKEN_LL,
+		TOKEN_RD,
+		TOKEN_PIPE,
+		TOKEN_SLASH,
+		TOKEN_BSLASH,
+		TOKEN_DOLLAR,
+		TOKEN_PARENR,
+		TOKEN_PARENL,
+		TOKEN_BACKETR,
+		TOKEN_BRACKETL,
+		TOKEN_DQUOTEL,
+		TOKEN_DQUOTER,
+		TOKEN_SQUOTEL,
+		TOKEN_SQUOTER,
+	} type;
+	char *value;
+}	t_tokens
 
 #endif

@@ -41,6 +41,7 @@ t_token *lexer_get_next_token(lexer_T *lexer)
 			case ')' : return lexer_advance_with_token(lexer, init_token(TOKEN_RPAREN, lexer_get_current_char_as_string(lexer))); break ; 
 		}
 	}
+	return (void *)0;
 }
 
 

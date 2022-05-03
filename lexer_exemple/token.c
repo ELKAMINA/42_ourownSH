@@ -1,4 +1,5 @@
 #include  "token.h"
+#include  "lexer.h"
 
 t_token* init_token(int type, char *value)
 {
